@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="task1.css">
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <input type="text" id="propertyInput" placeholder="Enter Name">
+        <input type="text" id="valueInput" placeholder="Enter age">
+        <button onclick="addProperty()">Add</button>
+
+        <ul class="property-list" id="propertyList"></ul>
+
+        <div class="object-display" id="objectDisplay"></div>
+    </div>
+
+    <script>
+        let person = { name: "Swetha", age: 22 };
+
+        function displayObject() {
+            document.getElementById("objectDisplay").innerHTML = JSON.stringify(person, null, 4);
+            updatePropertyList();
+        }
+
+        function addProperty() {
+            let property = document.getElementById("propertyInput").value;
+            let value = document.getElementById("valueInput").value;
+
+            if (property !== "" && value !== "") {
+                person[property] = value;
+                displayObject();
+            } else {
+                alert("Enter both property name and value");
+            }
+        }
+
+        function updatePropertyList() {
+            let propertyList = document.getElementById("propertyList");
+            propertyList.innerHTML = "";
+
+            for (let key in person) {
+                let listItem = document.createElement("li");
+                listItem.className = "property-item";
+                listItem.innerHTML = `${key}: ${person[key]} <button class="delete-btn" onclick="deleteProperty('${key}')">X</button`;
+                propertyList.appendChild(listItem);
+            }
+        }
+
+        function deleteProperty(property) {
+            delete person[property];
+            displayObject();
+        }
+
+        displayObject();
+    </script>
+
+</body>
+</html>

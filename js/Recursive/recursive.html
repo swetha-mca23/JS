@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">Recursive</h1>
+
+    <script>
+        let fact = function(input) {
+            if (input <= 0)
+                return 1; 
+            if (input === 1)
+                return 1;
+            return input * fact(input - 1);
+        };
+
+        document.getElementById("demo").innerHTML = fact(5); 
+    </script>
+</body>
+</html>

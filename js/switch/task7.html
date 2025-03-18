@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>SWITCH STATEMENT</h1>
+    <script>
+
+        // Example 1
+
+let ticket = 'economy'
+
+switch (ticket){
+    case  "economy":
+        console.log("Ticket is $50");
+        break;
+    case "firstclass":
+        console.log("Ticket is $150");
+        break;
+    case "FirstclassAC":
+        console.log("Ticket is $300");
+        break;
+    default:
+        console.log("Unknown ticket amount")
+        
+}
+
+
+
+//   Example 2
+
+let marks = 90;
+
+switch (true){
+    case marks >=50 && marks <=70:
+        console.log("pass");
+        break;
+    case marks >=70 && marks <=90 :
+        console.log("Good");
+        break;
+    case marks > 90 &&  marks <95:
+        console.log(Excellent);
+        break;
+    default:
+        console.log("fail")
+
+}
+
+
+// example 3
+
+
+
+let weather = "sunny";
+switch (weather){
+    case "sunny":
+        console.log("very sunny");
+        break;
+    case "rainy":
+        console.log("rainy");
+        break;
+    case "snow":
+        console.log("chill climate");
+        break;
+    default:
+      console.log("Unknown Weather");
+        
+}
+    </script>
+   
+</body>
+</html>
