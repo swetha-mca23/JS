@@ -13,8 +13,8 @@ console.log(result)
 
 const words = ["apple","orange","mango","chair","table","flower","rose"]
 
-const aplhabets = words.filter(word => word.length>5)
-console.log(aplhabets)
+const alphabets = words.filter(word => word.length>5)
+console.log(alphabets)
 
 
 
